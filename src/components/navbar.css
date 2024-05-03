@@ -19,3 +19,32 @@
   margin-left: 20px;
   font-size: 25px;
 }
+
+/* Media query untuk tablet */
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+  .links a {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+}
+
+/* Media query untuk mobile */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  .links {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .links a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}

@@ -23,15 +23,15 @@ export const Cart = () => {
           }
         })}
       </div>
-
       {totalAmount > 0 ? (
         <div className="checkout">
           <p> Subtotal: Rp.{totalAmount} </p>
           <button onClick={() => navigate("/")}> Continue Shopping </button>
           <button
             onClick={() => {
+              const currentDate = new Date().toLocaleDateString('id-ID');
               checkout();
-              navigate("/checkout");
+              navigate("/invoice", { state: { date: currentDate, totalAmount: totalAmount } });
             }}
           >
             Checkout
